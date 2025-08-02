@@ -80,6 +80,28 @@ class _QuizScreenState extends State<QuizScreen> {
           ],
         ),
       ),
+
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SizedBox(
+          height: 50,
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: () {
+            },
+            child: Text(
+              'Continuer',
+              style: TextStyle(fontSize: 15, color: Colors.white),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
