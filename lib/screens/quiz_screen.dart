@@ -90,7 +90,7 @@ class _QuizScreenState extends State<QuizScreen> {
             onPressed: () {
             },
             child: Text(
-              'Continuer',
+              'Continue',
               style: TextStyle(fontSize: 15, color: Colors.white),
             ),
             style: ElevatedButton.styleFrom(
