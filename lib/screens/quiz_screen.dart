@@ -9,6 +9,8 @@ class QuizScreen extends StatefulWidget {
 
 class _QuizScreenState extends State<QuizScreen> {
   String? radioValue;
+  String question = 'Quel est la capitale du niger?';
+  List<String> responses = ['Maradi', 'Niamey', 'Zinder', 'Agadez'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,43 +42,47 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
             ),
             Text(
-              'Quel est la capitale du niger?',
+              question,
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 20,),
-            GestureDetector(
-              
-              onTap: (){
+            ...responses.map((response) {
+            return GestureDetector(
+              onTap: () {
                 setState(() {
-                  
+                  radioValue = response;
                 });
               },
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                margin: EdgeInsets.symmetric(horizontal: 25),
-                height: 45,
+                margin: EdgeInsets.symmetric(vertical: 8,horizontal: 25),
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                height: 50,
                 decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.grey),
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.grey,
+                  ),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Maradi'),
-                    Radio(
-                      focusColor: Colors.blue,
-                      value: 'Maradi',
+                    Text(response),
+                    Radio<String>(
+                      value: response,
                       groupValue: radioValue,
-                      onChanged: (val){
+                      onChanged: (val) {
                         setState(() {
                           radioValue = val;
                         });
                       },
-                    )
+                      activeColor: Colors.blue,
+                    ),
                   ],
                 ),
               ),
-            ),
+            );
+          }).toList(),
           ],
         ),
       ),
@@ -88,16 +94,17 @@ class _QuizScreenState extends State<QuizScreen> {
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
+              print('Selected answer: $radioValue');
             },
-            child: Text(
-              'Continuer',
-              style: TextStyle(fontSize: 15, color: Colors.white),
-            ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blueAccent,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
+            ),
+            child: Text(
+              'Continuer',
+              style: TextStyle(fontSize: 15, color: Colors.white),
             ),
           ),
         ),
