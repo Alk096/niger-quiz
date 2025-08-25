@@ -10,6 +10,7 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   String? radioValue;
   String question = 'Quel est la capitale du niger?';
+  
   List<String> responses = ['Maradi', 'Niamey', 'Zinder', 'Agadez'];
   @override
   Widget build(BuildContext context) {
