@@ -1,6 +1,6 @@
 {
-    "name": "apklearn",
-    "short_name": "apklearn",
+    "name": "niger_quiz",
+    "short_name": "niger_quiz",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

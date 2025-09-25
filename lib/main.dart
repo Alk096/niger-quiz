@@ -1,6 +1,6 @@
-import 'package:apklearn/screens/OnBorading.dart';
-import 'package:apklearn/screens/quiz_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:niger_quiz/views/onboarding/onboarding_view.dart';
+import 'package:niger_quiz/routes/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Quiz Niger',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        // colorScheme: UrbainDriverColors.toColorScheme(),
       ),
-      // home: OnBoarding(),
-      home: QuizScreen(),
+      onGenerateRoute: AppRouter.generateRoute,
+      home: OnboardingView(),
     );
   }
 }
