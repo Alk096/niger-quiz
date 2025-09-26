@@ -17,8 +17,8 @@ class UrbainDriverColors {
     );
   }
   
-  static const Color primary = Color.fromARGB(255, 26, 188, 156);
-  static const Color secondary = Color.fromARGB(255, 46, 204, 112);
+  static const Color primary = Color.fromARGB(255, 25, 94, 230);
+  static const Color secondary= Color.fromARGB(255, 26, 188, 156);
   static const Color accent = Color(0xFF00C853);
 
   static const Color background = Color(0xFFFFFFFF);
