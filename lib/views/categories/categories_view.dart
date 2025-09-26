@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:niger_quiz/theme/colors.dart';
 import 'package:niger_quiz/theme/size.dart';
 import 'package:niger_quiz/theme/spacing.dart';
 import 'package:niger_quiz/theme/typography.dart';
