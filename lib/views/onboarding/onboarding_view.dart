@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:niger_quiz/routes/app_routes.dart';
 import 'package:niger_quiz/views/widgets/button.dart';
-import 'package:niger_quiz/theme/colors.dart';
 import 'package:niger_quiz/theme/spacing.dart';
 import 'package:niger_quiz/theme/typography.dart';
 
@@ -11,7 +10,6 @@ class OnboardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: UrbainDriverColors.background,
       body: Center(
         child: Column(
           children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:niger_quiz/routes/app_routes.dart';
 import 'package:niger_quiz/theme/size.dart';
 import 'package:niger_quiz/theme/spacing.dart';
 import 'package:niger_quiz/theme/typography.dart';
@@ -54,7 +55,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                     child: InkWell(
                       borderRadius: BorderRadius.all(Radius.circular(UrbainDriverSize.radiusSm)),
                       onTap: () {
-                        print('Hit ${category[1]}');
+                        Navigator.pushNamed(context, AppRoutes.quiz);
                       },
                       child: Card(
                         elevation: 1,

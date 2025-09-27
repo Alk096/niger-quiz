@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:niger_quiz/views/quiz/quiz_view.dart';
 import 'app_routes.dart';
 
 // === Import des vues ===
@@ -21,6 +22,8 @@ class AppRouter {
           );
         }
         return MaterialPageRoute(builder: (context) => CategoriesView(nom : nom));
+      case AppRoutes.quiz:
+        return MaterialPageRoute(builder: (context) => QuizView());
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(
